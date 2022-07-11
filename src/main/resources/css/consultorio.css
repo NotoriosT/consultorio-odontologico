@@ -1,0 +1,89 @@
+.imagemMenu{
+    -fx-background-image: url("img/back.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 100%;
+
+
+    -fx-background-position: center center;
+
+
+
+}
+#opaci{
+
+}
+.imagemLogo {
+    -fx-background-image: url("img/logo.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 100%;
+    -fx-background-position: center center;
+    -fx-opacity: 1.0;
+}
+.tituloLogin{
+
+    -fx-text-fill: #2C5891;
+    -fx-font-family: Ubuntu;
+}
+.botaoEntra{
+    -fx-border-radius: 10px;
+    -fx-background-color: #3D82DB;
+    -fx-text-fill: white;
+}
+.iconHome{
+    -fx-background-radius: 50px;
+    -fx-border-radius: 10px;
+    -fx-background-color: #3D82DB;
+
+}
+.bordeMenu{
+    -fx-background-radius: 50px;
+    -fx-border-radius: 10px;
+}
+.tabelaHomeMenus{
+    -fx-background-color: #3D82DB;
+    -fx-text-fill: white;
+-fx-background-radius: 40px;
+
+
+}
+
+.cordeFundo{
+    -fx-background-color: #3D82DB;
+
+}
+.infoPacienteHome{
+    -fx-background-color:#3D82DB ;
+    -fx-background-radius: 40px 0px 0px 40px;
+}
+.reports{
+    -fx-background-radius: 40px;
+    -fx-text-fill: white;
+}
+.botaoMenu{
+    -fx-background-color:#3D82DB ;
+    -fx-background-radius: 40px;
+    -fx-text-fill: white;
+}
+.salvarCliente{
+
+    -fx-background-color: white;
+    -fx-background-radius: 40px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 100%;
+
+
+    -fx-background-position: center center;
+
+}
+.fundo{
+    -fx-background-color: #13253CE5;
+    -fx-background-radius: 40px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 100%;
+
+
+    -fx-background-position: center center;
+
+}
+
+

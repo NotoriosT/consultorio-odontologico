@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1279.0" style="-fx-border-radius: 30" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.consultorio.ControllerLogin">
+    <children>
+        <Pane prefHeight="667.0" prefWidth="125.0" styleClass="iconHome" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="31.0" AnchorPane.topAnchor="22.0">
+            <children>
+                <FontAwesomeIconView accessibleRole="BUTTON" glyphName="HOME" glyphStyle="-fx-fill: white" layoutX="47.0" layoutY="104.0" onMouseClicked="#login" size="44" />
+                <FontAwesomeIconView glyphName="CALENDAR" glyphStyle="-fx-fill: #184A89" layoutX="47.0" layoutY="211.0" size="44" />
+                <FontAwesomeIconView glyphName="COMMENT" glyphStyle="-fx-fill: white" layoutX="46.0" layoutY="296.0" size="44" />
+                <FontAwesomeIconView glyphName="GROUP" glyphStyle="-fx-fill: white" layoutX="44.0" layoutY="381.0" onMouseClicked="#pacientes" size="44" />
+                <FontAwesomeIconView glyphName="GEAR" glyphStyle="-fx-fill: white" layoutX="49.0" layoutY="466.0" onMouseClicked="#config" size="44" />
+                <FontAwesomeIconView accessibleRole="BUTTON" glyphName="REMOVE" glyphStyle="-fx-fill: white" layoutX="45.0" layoutY="626.0" onMouseClicked="#sair" size="44" />
+
+            </children>
+        </Pane>
+        <TableView layoutX="178.0" layoutY="363.0" prefHeight="337.0" prefWidth="836.0" style="-fx-text-fill: white" styleClass="tabelaHomeMenus" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="186.0" AnchorPane.rightAnchor="269.0" AnchorPane.topAnchor="361.0">
+            <columns>
+                <TableColumn minWidth="0.0" prefWidth="227.0" style=" -fx-background-radius: 35px 0px 0px 0px;" styleClass="cordeFundo" text="Nome" />
+                <TableColumn minWidth="0.0" prefWidth="108.0" styleClass="cordeFundo" text="Apelido" />
+                <TableColumn minWidth="0.0" prefWidth="152.0" styleClass="cordeFundo" text="Profissional" />
+                <TableColumn minWidth="0.0" prefWidth="132.0" styleClass="cordeFundo" text="Doenças" />
+                <TableColumn prefWidth="134.0" styleClass="cordeFundo" text="procedimento" />
+                <TableColumn prefWidth="69.0" style=" -fx-background-radius: 0px 40px 0px 0px;" styleClass="cordeFundo" text="horario" />
+            </columns>
+        </TableView>
+        <VBox layoutX="168.0" layoutY="14.0" prefHeight="73.0" prefWidth="73.0" styleClass="imagemLogo" />
+        <Label layoutX="241.0" layoutY="31.0" prefHeight="38.0" prefWidth="96.0" styleClass="tituloLogin" text="Agenda">
+            <font>
+                <Font name="System Bold" size="26.0" />
+            </font></Label>
+        <Label layoutX="241.0" layoutY="60.0" prefHeight="18.0" prefWidth="114.0" styleClass="tituloLogin" text="Data">
+            <font>
+                <Font size="17.0" />
+            </font></Label>
+        <Pane layoutX="1037.0" prefHeight="720.0" prefWidth="242.0" styleClass="infoPacienteHome" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1037.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <FontAwesomeIconView glyphName="USER" glyphStyle="-fx-fill: white" layoutX="103.0" layoutY="132.0" size="50" />
+            </children></Pane>
+      <DatePicker layoutX="199.0" layoutY="288.0" prefHeight="38.0" prefWidth="313.0" styleClass="cordeFundo" />
+      <Button layoutX="531.0" layoutY="288.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="73.0" styleClass="botaoMenu" text="Buscar" />
+    </children>
+</AnchorPane>
