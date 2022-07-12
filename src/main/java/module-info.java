@@ -10,7 +10,12 @@ module com.example.consultorio {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
+    requires jakarta.persistence;
+requires org.hibernate.orm.core;
+requires java.sql;
+requires java.xml;
+    requires mysql.connector.java;
+    opens com.example.consultorio;
 
-    opens com.example.consultorio to javafx.fxml;
-    exports com.example.consultorio;
+
 }
