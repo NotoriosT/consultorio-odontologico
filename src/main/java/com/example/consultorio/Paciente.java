@@ -25,10 +25,10 @@ public class Paciente {
     private String nome;
     private String cpf;
     private String genero;
-    private String RG;
-    private String EstadoCivil;
+    private String rg;
+    private String apelido;
+    private String estadoCivil;
     private String Celular="*";
-    private String numero="*";
     private String email="*";
     private Boolean doenca=false;
     private String doencas="não";
@@ -49,7 +49,10 @@ public class Paciente {
 
         return agenda;
     }
-
+    public void adciona( Agenda agenda) {
+        agenda.setPaciente(this);
+        getAgenda().add(agenda);
+    }
     public void setAgenda(List<Agenda> agenda) {
         this.agenda = agenda;
     }
@@ -79,19 +82,19 @@ public class Paciente {
     }
 
     public String getRG() {
-        return RG;
+        return rg;
     }
 
     public void setRG(String RG) {
-        this.RG = RG;
+        this.rg = RG;
     }
 
     public String getEstadoCivil() {
-        return EstadoCivil;
+        return estadoCivil;
     }
 
     public void setEstadoCivil(String estadoCivil) {
-        EstadoCivil = estadoCivil;
+        this.estadoCivil = estadoCivil;
     }
 
     public String getCelular() {
@@ -102,13 +105,8 @@ public class Paciente {
         Celular = celular;
     }
 
-    public String getNumero() {
-        return numero;
-    }
 
-    public void setNumero(String numero) {
-        this.numero = numero;
-    }
+
 
     public String getEmail() {
         return email;

@@ -24,6 +24,8 @@ public class Main extends Application {
     private static Scene addProcedimento;
     private static Scene addProcedimentoDois;
     private static Scene abrirAgenda;
+
+
     String  arquivoCSS=getClass().getResource("/css/consultorio.css").toExternalForm();
 
     @Override

@@ -20,14 +20,15 @@
       <FontAwesomeIconView accessibleRole="BUTTON" glyphName="REMOVE" glyphStyle="-fx-fill: white" layoutX="45.0" layoutY="626.0" onMouseClicked="#sair" size="44" />
 
    </Pane>
-   <TableView layoutX="178.0" layoutY="363.0" prefHeight="337.0" prefWidth="836.0" style="-fx-text-fill: white" styleClass="tabelaHomeMenus" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="186.0" AnchorPane.rightAnchor="269.0" AnchorPane.topAnchor="361.0">
+   <TableView fx:id="tableView" layoutX="178.0" layoutY="363.0" prefHeight="337.0" prefWidth="836.0" style="-fx-text-fill: white" styleClass="tabelaHomeMenus" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="186.0" AnchorPane.rightAnchor="269.0" AnchorPane.topAnchor="361.0">
       <columns>
-         <TableColumn minWidth="0.0" prefWidth="227.0" style=" -fx-background-radius: 35px 0px 0px 0px;" styleClass="cordeFundo" text="Nome" />
-         <TableColumn minWidth="0.0" prefWidth="108.0" styleClass="cordeFundo" text="Apelido" />
+         <TableColumn fx:id="colunaNome" minWidth="0.0" prefWidth="227.0" style=" -fx-background-radius: 35px 0px 0px 0px;" styleClass="cordeFundo" text="Nome" />
+         <TableColumn fx:id="colunaApelido" minWidth="0.0" prefWidth="108.0" styleClass="cordeFundo" text="Apelido" />
          <TableColumn minWidth="0.0" prefWidth="152.0" styleClass="cordeFundo" text="Profissional" />
-         <TableColumn minWidth="0.0" prefWidth="132.0" styleClass="cordeFundo" text="Doenças" />
-         <TableColumn prefWidth="134.0" styleClass="cordeFundo" text="procedimento" />
-         <TableColumn prefWidth="69.0" style=" -fx-background-radius: 0px 40px 0px 0px;" styleClass="cordeFundo" text="horario" />
+         <TableColumn fx:id="colunaDoenca" minWidth="0.0" prefWidth="132.0" styleClass="cordeFundo" text="Doenças" />
+         <TableColumn fx:id="colunaProcedimento" prefWidth="134.0" styleClass="cordeFundo" text="procedimento" />
+         <TableColumn fx:id="colunaData" prefWidth="69.0" style=" -fx-background-radius: 0px 40px 0px 0px;" styleClass="cordeFundo" text="horario" />
+         <TableColumn fx:id="colunaData1" prefWidth="69.0" style=" -fx-background-radius: 0px 40px 0px 0px;" styleClass="cordeFundo" text="horario" />
       </columns>
    </TableView>
    <VBox layoutX="168.0" layoutY="14.0" prefHeight="73.0" prefWidth="73.0" styleClass="imagemLogo" />
@@ -84,5 +85,5 @@
       </Label>
    </VBox>
    <Button layoutX="880.0" layoutY="35.0" mnemonicParsing="false" onAction="#adcionaPaciente" prefHeight="31.0" prefWidth="130.0" styleClass="botaoMenu" text="+ Add Paciente" AnchorPane.bottomAnchor="643.0" AnchorPane.leftAnchor="856.0" AnchorPane.rightAnchor="293.0" AnchorPane.topAnchor="46.0" />
-   <Button layoutX="856.0" layoutY="98.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="130.0" styleClass="botaoMenu" text="+ Add Consultas" AnchorPane.topAnchor="82.0" />
+   <Button layoutX="856.0" layoutY="98.0" mnemonicParsing="false" onAction="#testando" prefHeight="31.0" prefWidth="130.0" styleClass="botaoMenu" text="+ Add Consultas" AnchorPane.topAnchor="82.0" />
 </AnchorPane>
