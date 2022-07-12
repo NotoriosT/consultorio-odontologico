@@ -38,10 +38,7 @@
          <toggleGroup>
             <ToggleGroup fx:id="doen" />
          </toggleGroup></RadioButton>
-      <RadioButton fx:id="doencaNao" layoutX="67.0" layoutY="138.0" mnemonicParsing="false" text="Não" AnchorPane.leftAnchor="64.0">
-         <toggleGroup>
-            <ToggleGroup fx:id="doenca" />
-         </toggleGroup></RadioButton>
+      <RadioButton fx:id="doencaNao" layoutX="67.0" layoutY="138.0" mnemonicParsing="false" text="Não" toggleGroup="$doen" AnchorPane.leftAnchor="64.0" />
       <Label layoutX="242.0" layoutY="252.0" styleClass="tituloLogin" text="Observações" AnchorPane.leftAnchor="64.0" AnchorPane.topAnchor="192.0">
          <font>
             <Font size="24.0" />

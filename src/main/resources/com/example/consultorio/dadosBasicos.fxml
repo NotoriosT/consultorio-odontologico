@@ -64,10 +64,7 @@
          <toggleGroup>
             <ToggleGroup fx:id="generero" />
          </toggleGroup></RadioButton>
-      <RadioButton fx:id="maculino" layoutX="509.0" layoutY="242.0" mnemonicParsing="false" text="H">
-         <toggleGroup>
-            <ToggleGroup fx:id="genero" />
-         </toggleGroup></RadioButton>
+      <RadioButton fx:id="maculino" layoutX="509.0" layoutY="242.0" mnemonicParsing="false" text="H" toggleGroup="$generero" />
       <Label layoutX="511.0" layoutY="323.0" styleClass="tituloLogin" text="RG" AnchorPane.rightAnchor="425.0" AnchorPane.topAnchor="288.0">
          <font>
             <Font size="24.0" />
