@@ -26,29 +26,29 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <TextField fx:id="nome" layoutX="67.0" layoutY="140.0" prefHeight="47.0" prefWidth="399.0" promptText="Nome" AnchorPane.bottomAnchor="388.0" AnchorPane.leftAnchor="64.0" AnchorPane.topAnchor="114.0" />
+      <TextField fx:id="nome" layoutX="67.0" layoutY="140.0" onKeyReleased="#teclad" prefHeight="47.0" prefWidth="399.0" promptText="Nome" AnchorPane.bottomAnchor="388.0" AnchorPane.leftAnchor="64.0" AnchorPane.topAnchor="114.0" />
       <Label layoutX="65.0" layoutY="191.0" prefHeight="28.0" prefWidth="399.0" styleClass="tituloLogin" text="Data de nascimento" AnchorPane.leftAnchor="64.0" AnchorPane.topAnchor="184.0">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <DatePicker layoutX="60.0" layoutY="222.0" prefHeight="47.0" prefWidth="399.0" styleClass="tituloLogin" AnchorPane.leftAnchor="64.0" AnchorPane.topAnchor="218.0" />
+      <DatePicker fx:id="dataNascimento" editable="false" layoutX="60.0" layoutY="222.0" onAction="#teclad" prefHeight="47.0" prefWidth="399.0" styleClass="tituloLogin" AnchorPane.leftAnchor="64.0" AnchorPane.topAnchor="218.0" />
       <Label layoutX="67.0" layoutY="296.0" prefHeight="28.0" prefWidth="44.0" styleClass="tituloLogin" text="CPF" AnchorPane.leftAnchor="64.0" AnchorPane.topAnchor="288.0">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <TextField fx:id="cpf" layoutX="67.0" layoutY="323.0" prefHeight="47.0" prefWidth="399.0" promptText="12345678910" AnchorPane.leftAnchor="64.0" AnchorPane.topAnchor="322.0" />
+      <TextField fx:id="cpf" layoutX="67.0" layoutY="323.0" onKeyReleased="#teclad" prefHeight="47.0" prefWidth="399.0" promptText="12345678910" AnchorPane.leftAnchor="64.0" AnchorPane.topAnchor="322.0" />
       <Label layoutX="72.0" layoutY="387.0" prefHeight="28.0" prefWidth="131.0" styleClass="tituloLogin" text="Estado Civil" AnchorPane.leftAnchor="64.0" AnchorPane.topAnchor="392.0">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <RadioButton fx:id="casado" layoutX="71.0" layoutY="427.0" mnemonicParsing="false" text="Casado" AnchorPane.leftAnchor="64.0" AnchorPane.topAnchor="426.0">
+      <RadioButton fx:id="casado" layoutX="71.0" layoutY="427.0" mnemonicParsing="false" onAction="#teclad" onInputMethodTextChanged="#teclad" text="Casado" AnchorPane.leftAnchor="64.0" AnchorPane.topAnchor="426.0">
          <toggleGroup>
             <ToggleGroup fx:id="estadiCivil" />
          </toggleGroup></RadioButton>
-      <RadioButton fx:id="solteiro" layoutX="63.0" layoutY="443.0" mnemonicParsing="false" text="Solteiro" toggleGroup="$estadiCivil" AnchorPane.leftAnchor="64.0" />
+      <RadioButton fx:id="solteiro" layoutX="63.0" layoutY="443.0" mnemonicParsing="false" onInputMethodTextChanged="#teclad" text="Solteiro" toggleGroup="$estadiCivil" AnchorPane.leftAnchor="64.0" />
       <Label layoutX="741.0" layoutY="106.0" prefHeight="24.0" prefWidth="87.0" styleClass="tituloLogin" text="Apelido" AnchorPane.leftAnchor="507.0" AnchorPane.topAnchor="80.0">
          <font>
             <Font size="24.0" />
@@ -60,18 +60,19 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <RadioButton fx:id="feminino" layoutX="509.0" layoutY="219.0" mnemonicParsing="false" text="F">
+      <RadioButton fx:id="feminino" layoutX="509.0" layoutY="219.0" mnemonicParsing="false" onAction="#teclad" onInputMethodTextChanged="#teclad" text="F">
          <toggleGroup>
             <ToggleGroup fx:id="generero" />
          </toggleGroup></RadioButton>
-      <RadioButton fx:id="maculino" layoutX="509.0" layoutY="242.0" mnemonicParsing="false" text="H" toggleGroup="$generero" />
+      <RadioButton fx:id="maculino" layoutX="509.0" layoutY="242.0" mnemonicParsing="false" onAction="#teclad" onInputMethodTextChanged="#teclad" text="H" toggleGroup="$generero" />
       <Label layoutX="511.0" layoutY="323.0" styleClass="tituloLogin" text="RG" AnchorPane.rightAnchor="425.0" AnchorPane.topAnchor="288.0">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <TextField fx:id="rg" layoutX="513.0" layoutY="333.0" prefHeight="47.0" prefWidth="399.0" AnchorPane.rightAnchor="58.0" AnchorPane.topAnchor="322.0" />
+      <TextField fx:id="rg" layoutX="513.0" layoutY="333.0" onKeyReleased="#teclad" prefHeight="47.0" prefWidth="399.0" AnchorPane.rightAnchor="58.0" AnchorPane.topAnchor="322.0" />
       <Button layoutX="618.0" layoutY="470.0" mnemonicParsing="false" onAction="#volta" prefHeight="52.0" prefWidth="144.0" styleClass="botaoMenu" text="Volta" AnchorPane.leftAnchor="612.0" AnchorPane.topAnchor="493.0" />
-      <Button layoutX="769.0" layoutY="493.0" mnemonicParsing="false" onAction="#adcionaPacienteDois" prefHeight="52.0" prefWidth="144.0" styleClass="botaoMenu" text="Proximo" AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="493.0" />
+      <Button fx:id="proximo1" disable="true" layoutX="769.0" layoutY="493.0" mnemonicParsing="false" onAction="#adcionaPacienteDois" prefHeight="52.0" prefWidth="144.0" styleClass="botaoMenu" text="Proximo" AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="493.0" />
+      <Button layoutX="837.0" layoutY="460.0" mnemonicParsing="false" onAction="#habilita" styleClass="botaoMenu" text="Verifica" />
    </children>
 </AnchorPane>

@@ -1,7 +1,8 @@
-package com.example.consultorio;
+package com.example.consultorio.entidades;
 
 import jakarta.persistence.*;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,7 +27,7 @@ public class Paciente {
     private String cpf;
     private String genero;
     private String rg;
-    private String apelido;
+    private LocalDate date;
     private String estadoCivil;
     private String Celular="*";
     private String email="*";
@@ -85,8 +86,8 @@ public class Paciente {
         return rg;
     }
 
-    public void setRG(String RG) {
-        this.rg = RG;
+    public void setRG(String rg) {
+        this.rg = rg;
     }
 
     public String getEstadoCivil() {
@@ -194,5 +195,14 @@ public class Paciente {
 
     public void setCoplemento(String coplemento) {
         this.coplemento = coplemento;
+    }
+
+
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
     }
 }

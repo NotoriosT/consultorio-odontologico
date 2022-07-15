@@ -1,5 +1,8 @@
-package com.example.consultorio;
+package com.example.consultorio.dao;
 
+import com.example.consultorio.entidades.Agenda;
+import com.example.consultorio.entidades.Paciente;
+import com.example.consultorio.entidades.Procedimento;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;

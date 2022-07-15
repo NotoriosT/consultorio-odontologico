@@ -1,5 +1,9 @@
 package com.example.consultorio;
 
+import com.example.consultorio.dao.DAO;
+import com.example.consultorio.entidades.Agenda;
+import com.example.consultorio.entidades.Paciente;
+import com.example.consultorio.validadores.CPF;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -9,60 +13,65 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.net.URL;
+
 import java.util.List;
 import java.util.ResourceBundle;
 
 public class ControllerLogin implements Initializable {
  static int memoriaScene;
    static int volta;
+   private static Paciente paciente=new Paciente();
     @FXML
     TextField login;
     @FXML
     TextField senha;
 
     @FXML
-    private TextField cpf;
+      TextField cpf;
     @FXML
-    private TextField nome;
+     TextField nome;
     @FXML
-    private RadioButton  maculino;
+      DatePicker dataNascimento;
     @FXML
-    private RadioButton  feminino;
+   RadioButton  maculino ;
     @FXML
-    private TextField  rg;
+        RadioButton  feminino;
     @FXML
-    private TextField apelido;
+    TextField  rg;
     @FXML
-    private RadioButton  casado;
+    TextField apelido=new TextField();
     @FXML
-    private RadioButton  solteiro;
+     RadioButton  casado;
     @FXML
-    private TextField  celular;
+     RadioButton  solteiro;
     @FXML
-    private TextField  email;
+     TextField  celular;
     @FXML
-    private RadioButton doencaSim;
+     TextField  email;
+    @FXML
+     RadioButton doencaSim;
 
     @FXML
-    private RadioButton doencaNao;
+    RadioButton doencaNao;
     @FXML
-    private TextField  doencas;
+    TextField  doencas;
     @FXML
-    private TextArea doencasObservacoes;
+    TextArea doencasObservacoes;
     @FXML
-    private  TextField  logradouro;
+    TextField  logradouro;
     @FXML
-    private TextField  numroDaCasa;
+    TextField  numroDaCasa;
     @FXML
-    private TextField  cidade;
+    TextField  cidade;
     @FXML
-    private TextField  estado;
+    TextField  estado;
     @FXML
-    private TextField  bairro;
+    TextField  bairro;
     @FXML
-    private TextField  cep;
+    TextField  cep;
     @FXML
-    private TextField  coplemento;
+    TextField  coplemento;
+    @FXML Button proximo1;
 
     @FXML
    private TableView<Agenda> tableView= new TableView<>();
@@ -117,7 +126,7 @@ void testando(){
 prencherTabela();
     }
    private   void prencherTabela(){
-        DAO<Object>dao=new DAO<>(Object.class);
+        DAO<Object> dao=new DAO<>(Object.class);
 
 List<Agenda>agenda=dao.obterTodos();
        ObservableList<Agenda> agendas= FXCollections.observableArrayList(agenda);
@@ -164,6 +173,11 @@ memoriaScene=2;
         volta=memoriaScene;
 
 
+       //CONTADO
+
+        //DOENÇAS
+
+
     }
     @FXML
     protected void volta() {
@@ -175,8 +189,9 @@ memoriaScene=2;
     }
     @FXML
     protected void adcionaPacienteDois() {
-
         Main.trocaTela(6);
+
+
 
     }
     @FXML
@@ -184,16 +199,17 @@ memoriaScene=2;
 
         Main.trocaTela(7);
 
+
     }
     @FXML
     protected void adcionaPacienteQuatro() {
 
         Main.trocaTela(8);
 
+
     }
     @FXML
     protected void adcionaPacienteCadastro() {
-
         Main.trocaTela(9);
 
     }
@@ -202,8 +218,14 @@ memoriaScene=2;
 
         Main.trocaTela(10);
 
-    }
 
+    }
+    @FXML
+    protected void realmenteSalvar() {
+        Main.trocaTela(volta);
+        DAO<Object>dao=new DAO<>();
+        dao.persistirCompleto(paciente);
+    }
     @FXML
     protected void adcionaPacienteExluir() {
 
@@ -238,4 +260,68 @@ memoriaScene=2;
     }
 
 
+    protected void addPacienteButooProx(){
+
+            paciente.setNome(nome.getText());
+            paciente.setCpf(cpf.getText());
+            paciente.setRG(rg.getText());
+
+            if (maculino.isSelected()) {
+                paciente.setGenero("masculino");
+            }
+            if (feminino.isSelected()) {
+                paciente.setGenero("feminino");
+            }
+            paciente.setDate(dataNascimento.getValue());
+            paciente.setEstadoCivil("solteiro");
+            if (casado.isSelected()) {
+                paciente.setEstadoCivil("casado");
+            }
+            }
+
+
+    protected void addPacienteButooProxDois(){
+        paciente.setCelular(celular.getText());
+        paciente.setEmail(email.getText());
+    }
+
+    protected void addPacienteButooProxTres(){
+        paciente.setDoenca(false);
+        paciente.setDoencas("*");
+        paciente.setDoencasObservacoes("*");
+        if (doencaSim.isSelected()){
+            paciente.setDoenca(doencaSim.isSelected());
+            paciente.setDoencas(doencas.getText());
+            paciente.setDoencasObservacoes(doencasObservacoes.getText());
+        }
+    }
+
+
+    protected void addPacienteButooProxQuatro() {
+
+        paciente.setLogradouro(logradouro.getText());
+        paciente.setBairro(bairro.getText());
+        paciente.setBairro(bairro.getText());
+        paciente.setCidade(cidade.getText());
+        paciente.setEstado(estado.getText());
+        paciente.setNumroDaCasa(numroDaCasa.getText());
+        paciente.setCep(cep.getText());
+        paciente.setCoplemento(coplemento.getText());
+    }
+
+
+    @FXML
+    protected  void teclad(){
+proximo1.setDisable(true);
+    }
+
+@FXML
+protected void habilita(){
+    CPF cpf1=new CPF(cpf.getText());
+    System.out.println(cpf1.isCPF());
+        boolean habilitaBotaoUm=(nome.getText().isEmpty()| cpf.getText().isEmpty()| rg.getText().isEmpty()| dataNascimento.getValue() == null
+                |!(maculino.isSelected()|feminino.isSelected())|!(casado.isSelected()|solteiro.isSelected()) |!cpf1.isCPF() );
+
+        proximo1.setDisable(habilitaBotaoUm);
+}
 }

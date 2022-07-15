@@ -15,7 +15,10 @@ requires org.hibernate.orm.core;
 requires java.sql;
 requires java.xml;
     requires mysql.connector.java;
+    requires java.desktop;
     opens com.example.consultorio;
+    opens com.example.consultorio.entidades;
+    opens com.example.consultorio.dao;
 
 
 }
