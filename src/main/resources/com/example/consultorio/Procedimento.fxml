@@ -54,7 +54,7 @@
          <ToggleGroup fx:id="procedimento" />
       </toggleGroup></RadioButton>
     <RadioButton layoutX="963.0" layoutY="314.0" mnemonicParsing="false" text="Valor" toggleGroup="$procedimento" />
-    <Button layoutX="881.0" layoutY="74.0" mnemonicParsing="false" onAction="#adcionaProcedimentoDois" prefHeight="41.0" prefWidth="202.0" styleClass="botaoMenu" text="+ ADD Procedimento" AnchorPane.bottomAnchor="653.0" AnchorPane.rightAnchor="253.0" AnchorPane.topAnchor="26.0">
+    <Button layoutX="881.0" layoutY="74.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="202.0" styleClass="botaoMenu" text="+ ADD Procedimento" AnchorPane.bottomAnchor="653.0" AnchorPane.rightAnchor="253.0" AnchorPane.topAnchor="26.0">
         <font>
             <Font size="18.0" />
         </font>

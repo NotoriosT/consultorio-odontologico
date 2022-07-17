@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class Main extends Application {
     private  static Stage stages;
@@ -26,7 +27,7 @@ public class Main extends Application {
     private static Scene abrirAgenda;
 
 
-    String  arquivoCSS=getClass().getResource("/css/consultorio.css").toExternalForm();
+    String  arquivoCSS= Objects.requireNonNull(getClass().getResource("/css/consultorio.css")).toExternalForm();
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -80,6 +81,15 @@ public class Main extends Application {
       abrirAgenda=new Scene(agenda.load());
 
 
+        styleCsss(menuScene, mainScene, calendarScena, paciente, addPacienteUm, addPacientedois, addPacienteTres);
+        styleCsss(addPacienteQuatro, addPacienteCadastro, addSalvar, addExcluir, configScena, addProcedimento, addProcedimentoDois);
+        abrirAgenda.getStylesheets().add(arquivoCSS);
+        stage.setTitle("consultorio");
+        stage.setScene(mainScene);
+        stage.show();
+    }
+
+    private void styleCsss(Scene menuScene, Scene mainScene, Scene calendarScena, Scene paciente, Scene addPacienteUm, Scene addPacientedois, Scene addPacienteTres) {
         menuScene.getStylesheets().add(arquivoCSS);
         mainScene.getStylesheets().add(arquivoCSS);
         calendarScena.getStylesheets().add(arquivoCSS);
@@ -87,95 +97,26 @@ public class Main extends Application {
         addPacienteUm.getStylesheets().add(arquivoCSS);
         addPacientedois.getStylesheets().add(arquivoCSS);
         addPacienteTres.getStylesheets().add(arquivoCSS);
-        addPacienteQuatro.getStylesheets().add(arquivoCSS);
-        addPacienteCadastro.getStylesheets().add(arquivoCSS);
-        addSalvar.getStylesheets().add(arquivoCSS);
-        addExcluir.getStylesheets().add(arquivoCSS);
-        configScena.getStylesheets().add(arquivoCSS);
-        addProcedimento.getStylesheets().add(arquivoCSS);
-        addProcedimentoDois.getStylesheets().add(arquivoCSS);
-        abrirAgenda.getStylesheets().add(arquivoCSS);
-        stage.setTitle("consultorio");
-        stage.setScene(mainScene);
-        stage.show();
     }
+
     public static void trocaTela(int i){
-        switch (i){
-            case 1:
+        switch (i) {
+            case 1 -> stages.setScene(menuScene);
 
-
-                stages.setScene(menuScene);
-                break;
-            case 2:
-
-
-                stages.setScene(mainScene);
-                break;
-
-
-            case 3:
-
-
-                stages.setScene(calendarScena);
-                break;
-            case 4:
-
-                stages.setScene(paciente);
-                break;
-            case 5:
-
-                stages.setScene(addPacienteUm);
-                break;
-            case 6:
-
-                stages.setScene(addPacientedois);
-                break;
-            case 7:
-
-                stages.setScene(addPacienteTres);
-                break;
-
-            case 8:
-                System.out.println("fghhggjh");
-                stages.setScene(addPacienteQuatro);
-                break;
-            case 9:
-                System.out.println("fghhggjh");
-                stages.setScene(addPacienteCadastro);
-                break;
-            case 10:
-
-                stages.setScene(addSalvar);
-                break;
-
-            case 11:
-
-                stages.setScene(addExcluir);
-                break;
-            case 12:
-
-                stages.setScene(configScena);
-                break;
-
-            case 13:
-
-                stages.setScene(addProcedimento);
-                break;
-
-            case 14:
-
-                stages.setScene(addProcedimentoDois);
-                break;
-
-            case 15:
-
-                stages.setScene(abrirAgenda);
-                break;
-
-
-
-
-
+            case 2 -> stages.setScene(mainScene);
+            case 3 -> stages.setScene(calendarScena);
+            case 4 -> stages.setScene(paciente);
+            case 5 -> stages.setScene(addPacienteUm);
+            case 6 -> stages.setScene(addPacientedois);
+            case 7 -> stages.setScene(addPacienteTres);
+            case 8 -> stages.setScene(addPacienteQuatro);
+            case 9 -> stages.setScene(addPacienteCadastro);
+            case 10 -> stages.setScene(addSalvar);
+            case 11 -> stages.setScene(addExcluir);
+            case 12 -> stages.setScene(configScena);
+            case 13 -> stages.setScene(addProcedimento);
+            case 14 -> stages.setScene(addProcedimentoDois);
+            case 15 -> stages.setScene(abrirAgenda);
         }
 
     }

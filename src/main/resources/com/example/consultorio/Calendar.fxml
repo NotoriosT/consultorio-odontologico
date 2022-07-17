@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-
+<?import com.example.consultorio.util.* ?>
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1279.0" style="-fx-border-radius: 30" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.consultorio.ControllerLogin">
     <children>
         <Pane prefHeight="667.0" prefWidth="125.0" styleClass="iconHome" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="31.0" AnchorPane.topAnchor="22.0">

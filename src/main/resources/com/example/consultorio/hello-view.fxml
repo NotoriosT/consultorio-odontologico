@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-
+<?import com.example.consultorio.util.* ?>
 <Pane fx:id="button" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="imagemMenu" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.consultorio.ControllerLogin">
    <children>
       <Button layoutX="902.0" layoutY="516.0" mnemonicParsing="false" onAction="#login" prefHeight="57.0" prefWidth="121.0" text="Entra" styleClass="botaoEntra">

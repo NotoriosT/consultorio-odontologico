@@ -6,12 +6,12 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1280.0" styleClass="fundo" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.consultorio.ControllerLogin">
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" styleClass="fundo" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.consultorio.ControllerRtSalvaOuExcluir">
    <children>
       <Pane layoutX="426.0" layoutY="240.0" prefHeight="241.0" prefWidth="446.0" styleClass="salvarCliente" AnchorPane.leftAnchor="417.0" AnchorPane.topAnchor="240.0">
          <children>
             <Button layoutX="223.0" layoutY="143.0" mnemonicParsing="false" onAction="#realmenteSalvar" prefHeight="52.0" prefWidth="140.0" styleClass="botaoMenu" text="Sim" />
-            <Button layoutX="60.0" layoutY="143.0" mnemonicParsing="false" onAction="#adcionaPacienteCadastro" prefHeight="52.0" prefWidth="140.0" styleClass="botaoMenu" text="Não" />
+            <Button layoutX="60.0" layoutY="143.0" mnemonicParsing="false" onAction="#voltaNAo" prefHeight="52.0" prefWidth="140.0" styleClass="botaoMenu" text="Não" />
             <Label layoutX="40.0" layoutY="42.0" prefHeight="45.0" prefWidth="366.0" styleClass="tituloLogin" text="Voçê realmente que salvar?">
                <font>
                   <Font size="30.0" />

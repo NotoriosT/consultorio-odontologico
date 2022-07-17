@@ -85,5 +85,5 @@
       </Label>
    </VBox>
    <Button layoutX="880.0" layoutY="35.0" mnemonicParsing="false" onAction="#adcionaPaciente" prefHeight="31.0" prefWidth="130.0" styleClass="botaoMenu" text="+ Add Paciente" AnchorPane.bottomAnchor="643.0" AnchorPane.leftAnchor="856.0" AnchorPane.rightAnchor="293.0" AnchorPane.topAnchor="46.0" />
-   <Button layoutX="856.0" layoutY="98.0" mnemonicParsing="false" onAction="#testando" prefHeight="31.0" prefWidth="130.0" styleClass="botaoMenu" text="+ Add Consultas" AnchorPane.topAnchor="82.0" />
+   <Button layoutX="856.0" layoutY="98.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="130.0" styleClass="botaoMenu" text="+ Add Consultas" AnchorPane.topAnchor="82.0" />
 </AnchorPane>
