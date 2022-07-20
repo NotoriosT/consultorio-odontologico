@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<?import com.example.consultorio.util.*?>
+<?import com.example.configs.util.*?>
 <AnchorPane prefHeight="545.0" prefWidth="964.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.consultorio.ControllerPacienteBasicos">
    <Label prefHeight="28.0" prefWidth="185.0" styleClass="tituloLogin" text="Dados Básicos" AnchorPane.bottomAnchor="517.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="806.0" AnchorPane.topAnchor="0.0">
       <font>

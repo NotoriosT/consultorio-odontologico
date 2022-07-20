@@ -1,4 +1,4 @@
-package com.example.consultorio.util;
+package com.example.configs.util;
 import java.util.ArrayList;
 import javafx.scene.control.TextField;
 

@@ -1,4 +1,4 @@
-package com.example.consultorio.entidades;
+package com.example.configs.entidades;
 
 import jakarta.persistence.*;
 

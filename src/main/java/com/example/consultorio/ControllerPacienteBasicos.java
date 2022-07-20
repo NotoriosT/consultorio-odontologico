@@ -1,13 +1,12 @@
 package com.example.consultorio;
 
-import com.example.consultorio.util.MaskTextField;
-import com.example.consultorio.validadores.CPF;
+import com.example.configs.util.MaskTextField;
+import com.example.configs.validadores.CPF;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.RadioButton;
-import javafx.scene.control.TextField;
 
 import java.net.URL;
 import java.util.ResourceBundle;

@@ -1,4 +1,4 @@
-package com.example.consultorio.validadores;
+package com.example.configs.validadores;
 import javax.swing.text.DefaultFormatterFactory;
 import javax.swing.text.MaskFormatter;
 

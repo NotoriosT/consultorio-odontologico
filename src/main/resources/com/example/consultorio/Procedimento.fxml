@@ -15,7 +15,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1279.0" style="-fx-border-radius: 30" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.consultorio.ControllerLogin">
     <Pane prefHeight="667.0" prefWidth="125.0" styleClass="iconHome" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="31.0" AnchorPane.topAnchor="22.0">
-        <FontAwesomeIconView accessibleRole="BUTTON" glyphName="HOME" glyphStyle="-fx-fill: white" layoutX="47.0" layoutY="104.0" onMouseClicked="#login" size="44" />
+        <FontAwesomeIconView accessibleRole="BUTTON" glyphName="HOME" glyphStyle="-fx-fill: white" layoutX="47.0" layoutY="104.0"  size="44" />
         <FontAwesomeIconView glyphName="CALENDAR" glyphStyle="-fx-fill: white " layoutX="47.0" layoutY="211.0" onMouseClicked="#calendar" size="44" />
         <FontAwesomeIconView glyphName="COMMENT" glyphStyle="-fx-fill: white" layoutX="46.0" layoutY="296.0" size="44" />
         <FontAwesomeIconView glyphName="GROUP" glyphStyle="-fx-fill: white" layoutX="44.0" layoutY="381.0" size="44" />
@@ -54,7 +54,7 @@
          <ToggleGroup fx:id="procedimento" />
       </toggleGroup></RadioButton>
     <RadioButton layoutX="963.0" layoutY="314.0" mnemonicParsing="false" text="Valor" toggleGroup="$procedimento" />
-    <Button layoutX="881.0" layoutY="74.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="202.0" styleClass="botaoMenu" text="+ ADD Procedimento" AnchorPane.bottomAnchor="653.0" AnchorPane.rightAnchor="253.0" AnchorPane.topAnchor="26.0">
+    <Button layoutX="881.0" layoutY="74.0" mnemonicParsing="false" onAction="#adcionaProcedimentoDois" prefHeight="41.0" prefWidth="202.0" styleClass="botaoMenu" text="+ ADD Procedimento" AnchorPane.bottomAnchor="653.0" AnchorPane.rightAnchor="253.0" AnchorPane.topAnchor="26.0">
         <font>
             <Font size="18.0" />
         </font>

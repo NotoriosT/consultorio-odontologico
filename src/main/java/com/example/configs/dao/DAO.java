@@ -1,8 +1,8 @@
-package com.example.consultorio.dao;
+package com.example.configs.dao;
 
-import com.example.consultorio.entidades.Agenda;
-import com.example.consultorio.entidades.Paciente;
-import com.example.consultorio.entidades.Procedimento;
+import com.example.configs.entidades.Agenda;
+import com.example.configs.entidades.Paciente;
+import com.example.configs.entidades.Procedimento;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
@@ -64,6 +64,15 @@ public class DAO<E> {
         }
         String jpql="Select p from Agenda p  ";
         TypedQuery<E> eTypedQuery=entityManager.createQuery(jpql, classe);
+        return (List<Agenda>) eTypedQuery.getResultList();
+    }
+
+    public List<Agenda>obterData(String tipo){
+        if (classe==null){
+            throw new UnsupportedOperationException("clase nula");
+        }
+        String jpql="Select p from Agenda p where p.data like  :parame ";
+        TypedQuery<E> eTypedQuery=entityManager.createQuery(jpql, classe).setParameter("parame",tipo+"%");;
         return (List<Agenda>) eTypedQuery.getResultList();
     }
   /*  public List<E> TipoBusca(String tipo){

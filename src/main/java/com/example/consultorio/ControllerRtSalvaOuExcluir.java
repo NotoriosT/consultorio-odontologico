@@ -1,9 +1,6 @@
 package com.example.consultorio;
 
-import com.example.consultorio.ControllerLogin;
-import com.example.consultorio.Main;
-import com.example.consultorio.PacientesConfigs;
-import com.example.consultorio.dao.DAO;
+import com.example.configs.dao.DAO;
 import javafx.fxml.FXML;
 
 public class ControllerRtSalvaOuExcluir {

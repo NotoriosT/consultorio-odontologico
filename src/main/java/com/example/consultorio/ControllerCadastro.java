@@ -1,6 +1,5 @@
 package com.example.consultorio;
 
-import com.example.consultorio.dao.DAO;
 import javafx.fxml.FXML;
 
 public class ControllerCadastro {
