@@ -50,35 +50,7 @@ public class ControllerCalendar implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        LocalDate localDate=LocalDate.now();
-        data.setText(localDate.toString());
-        colunaNome.setCellValueFactory((agenda) -> {
-            if (agenda.getValue().getPaciente() != null) {
-                return new SimpleStringProperty(agenda.getValue().getPaciente().getNome());
-            }
-            return null;
-        });
-        colunaApelido.setCellValueFactory((agenda) -> {
-            if (agenda.getValue().getPaciente() != null) {
-                return new SimpleStringProperty(agenda.getValue().getPaciente().getNome());
-            }
-            return null;
-        });
-        colunaDoenca.setCellValueFactory((agenda) -> {
-            if (agenda.getValue().getPaciente() != null) {
-                return new SimpleStringProperty(agenda.getValue().getPaciente().getDoencas());
-            }
-            return null;
-        });
-
-
-        colunaData.setCellValueFactory(new PropertyValueFactory<Agenda, String>("data"));
-        colunaProcedimento.setCellValueFactory((agenda) -> {
-            if (agenda.getValue().getProcedimento() != null) {
-                return new SimpleStringProperty(agenda.getValue().getProcedimento().getNome());
-            }
-            return null;
-        });
+        ControllerLogin.setColunaAgenda(data, colunaNome, colunaApelido, colunaDoenca, colunaData, colunaProcedimento);
 
         prencherTabela();
 

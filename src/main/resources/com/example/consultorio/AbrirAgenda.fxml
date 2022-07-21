@@ -24,7 +24,7 @@
                 <Font size="24.0" />
             </font>
         </Label>
-        <MaskTextField fx:id="tempoDeConsulta" layoutX="67.0" layoutY="140.0" prefHeight="47.0" prefWidth="399.0" promptText="1:30" AnchorPane.bottomAnchor="388.0" AnchorPane.leftAnchor="64.0" AnchorPane.topAnchor="114.0" />
+        <MaskTextField fx:id="tempoDeConsulta" layoutX="67.0" layoutY="140.0" onKeyReleased="#desabilita" prefHeight="47.0" prefWidth="399.0" promptText="1:30" AnchorPane.bottomAnchor="388.0" AnchorPane.leftAnchor="64.0" AnchorPane.topAnchor="114.0" />
         <Label layoutX="65.0" layoutY="191.0" prefHeight="28.0" prefWidth="399.0" styleClass="tituloLogin" text="Data inicial" AnchorPane.leftAnchor="64.0" AnchorPane.topAnchor="184.0">
             <font>
                 <Font size="24.0" />
@@ -36,7 +36,7 @@
                 <Font size="24.0" />
             </font>
         </Label>
-        <MaskTextField fx:id="inicioDoExpediente" layoutX="64.0" layoutY="322.0" prefHeight="47.0" prefWidth="399.0" promptText="12:00" AnchorPane.leftAnchor="64.0" AnchorPane.topAnchor="322.0" />
+        <MaskTextField fx:id="inicioDoExpediente" layoutX="64.0" layoutY="322.0" onKeyReleased="#desabilita" prefHeight="47.0" prefWidth="399.0" promptText="12:00" AnchorPane.leftAnchor="64.0" AnchorPane.topAnchor="322.0" />
         <Label layoutX="72.0" layoutY="387.0" prefHeight="35.0" prefWidth="178.0" styleClass="tituloLogin" text="Inicio do almoço" AnchorPane.leftAnchor="64.0" AnchorPane.topAnchor="392.0">
             <font>
                 <Font size="24.0" />
@@ -52,13 +52,13 @@
                 <Font size="24.0" />
             </font>
         </Label>
-        <MaskTextField fx:id="fimDoExpediente" layoutX="513.0" layoutY="333.0" prefHeight="47.0" prefWidth="399.0" promptText="13:00" AnchorPane.rightAnchor="58.0" AnchorPane.topAnchor="322.0" />
+        <MaskTextField fx:id="fimDoExpediente" layoutX="513.0" layoutY="333.0" onKeyReleased="#desabilita" prefHeight="47.0" prefWidth="399.0" promptText="13:00" AnchorPane.rightAnchor="58.0" AnchorPane.topAnchor="322.0" />
         <Button layoutX="454.0" layoutY="493.0" mnemonicParsing="false" onAction="#volta" prefHeight="52.0" prefWidth="144.0" styleClass="botaoMenu" text="Volta" AnchorPane.leftAnchor="454.0" AnchorPane.topAnchor="493.0" />
-        <Button fx:id="salva" disable="true" layoutX="769.0" layoutY="493.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="144.0" styleClass="botaoMenu" text="Salvar" AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="493.0" />
+        <Button fx:id="salva" disable="true" layoutX="769.0" layoutY="493.0" mnemonicParsing="false" onAction="#salvar" prefHeight="52.0" prefWidth="144.0" styleClass="botaoMenu" text="Salvar" AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="493.0" />
         <Button layoutX="621.0" layoutY="493.0" mnemonicParsing="false" onAction="#verifica" prefHeight="52.0" prefWidth="144.0" styleClass="botaoMenu" text="Verifica" />
       <DatePicker fx:id="fimDaAgenda" editable="false" layoutX="507.0" layoutY="218.0" onAction="#desabilita" prefHeight="47.0" prefWidth="399.0" styleClass="tituloLogin" />
-      <MaskTextField fx:id="inicioDoAlmoco" layoutX="64.0" layoutY="427.0" prefHeight="47.0" prefWidth="399.0" promptText="12:00" />
-      <MaskTextField fx:id="fimDoAlmoco" layoutX="505.0" layoutY="427.0" prefHeight="47.0" prefWidth="399.0" promptText="13:00" />
+      <MaskTextField fx:id="inicioDoAlmoco" layoutX="64.0" layoutY="427.0" onKeyReleased="#desabilita" prefHeight="47.0" prefWidth="399.0" promptText="12:00" />
+      <MaskTextField fx:id="fimDoAlmoco" layoutX="505.0" layoutY="427.0" onKeyReleased="#desabilita" prefHeight="47.0" prefWidth="399.0" promptText="13:00" />
       <Label layoutX="505.0" layoutY="392.0" styleClass="tituloLogin" text="Fim do almoço">
          <font>
             <Font size="24.0" />

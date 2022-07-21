@@ -34,8 +34,11 @@ public class Agenda {
             this.paciente=paciente;
             if (!paciente.getAgenda().contains(this)){
                 paciente.getAgenda().add(this);
+
             }
-        }
+        }else
+        {
+            this.paciente=null;}
 
     }
     public void adcionaProcedimento(Procedimento procedimento){

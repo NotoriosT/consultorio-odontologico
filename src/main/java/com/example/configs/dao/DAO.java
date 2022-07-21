@@ -133,4 +133,12 @@ public class DAO<E> {
         return (Agenda) eTypedQuery.getSingleResult();
     }
 
+    public List<Paciente> buscaNomePaciente(String nome) {
+        if (classe==null){
+            throw new UnsupportedOperationException("clase nula");
+        }
+        String jpql="Select p from Paciente p where p.nome like  :parame ";
+        TypedQuery<E> eTypedQuery=entityManager.createQuery(jpql, classe).setParameter("parame",nome+"%");;
+        return (List<Paciente>) eTypedQuery.getResultList();
+    }
 }

@@ -1,6 +1,7 @@
 package com.example.consultorio;
 
 import com.example.configs.util.MaskTextField;
+import com.example.configs.util.PersistirAgenda;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -64,23 +65,44 @@ fimDoAlmoco.setMask("NN:NN");
 
     @FXML
     private  void verifica(){
-        System.out.println(tempoDeConsulta.getText());
+
         try {
-        LocalTime.parse(tempoDeConsulta.getText());
-        LocalTime.parse(inicioDoExpediente.getText());
-        LocalTime.parse(fimDoExpediente.getText());
-        LocalTime.parse(inicioDoAlmoco.getText());
-        LocalTime.parse(fimDoAlmoco.getText());
-        boolean  habilita=  (!incioDaAgenda.getValue().isBefore(fimDaAgenda.getValue()) );
+   LocalTime consulta= LocalTime.parse(tempoDeConsulta.getText());
+   LocalTime inicioExe=      LocalTime.parse(inicioDoExpediente.getText());
+   LocalTime fimExe   = LocalTime.parse(fimDoExpediente.getText());
+   LocalTime inicioAlmo=     LocalTime.parse(inicioDoAlmoco.getText());
+   LocalTime fimAlmo =   LocalTime.parse(fimDoAlmoco.getText());
+
+            System.out.println(  !incioDaAgenda.equals(fimDaAgenda.getValue())&&  incioDaAgenda.equals(fimDaAgenda.getValue()) );
+        boolean  habilita=  ((!incioDaAgenda.getValue().isBefore(fimDaAgenda.getValue())&&incioDaAgenda.equals(fimDaAgenda.getValue()))|
+                !consulta.isBefore(fimExe)|
+                inicioExe.isAfter(fimExe)|
+                inicioAlmo.isAfter(fimExe) |
+                fimAlmo.isAfter(fimExe)
+                | inicioAlmo.isAfter(fimAlmo)
+
+
+        );
         salva.setDisable(habilita);
     }catch (Exception e){
 
-    }
 
+    }}
 
-    }
     @FXML
     private void desabilita(){
         salva.setDisable(true);
     }
+
+    @FXML
+    private  void salvar(){
+        System.out.println("asdds");
+        PersistirAgenda persistirAgenda=new PersistirAgenda(inicioDoExpediente.getText(),
+                tempoDeConsulta.getText(), incioDaAgenda.getValue().toString(), fimDaAgenda.getValue().toString(),
+                fimDoExpediente.getText(), inicioDoAlmoco.getText(), fimDoAlmoco.getText()
+
+        );
+persistirAgenda.prencher();
+    }
+
 }

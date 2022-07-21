@@ -22,9 +22,7 @@ public class ControllerDoencas {
     Button proximo;
 
     protected void setDoencas() {
-        PacientesConfigs.paciente.setDoenca(false);
-        PacientesConfigs.paciente.setDoencas("*");
-        PacientesConfigs.paciente.setDoencasObservacoes("*");
+        PacientesConfigs.paciente.setDoenca(doencaSim.isSelected());
         if (doencaSim.isSelected()) {
             PacientesConfigs.paciente.setDoenca(doencaSim.isSelected());
             PacientesConfigs.paciente.setDoencas(doencas.getText());
